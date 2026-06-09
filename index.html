@@ -1,0 +1,1616 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel A. | ThatGraphicsGuy — Graphic Designer & Print Production Specialist</title>
+    <meta name="description" content="Professional portfolio of Manuel A. (ThatGraphicsGuy), a Graphic Designer & Print Production Specialist based in Lagos, Nigeria. Premium branding, print media, and editorial design.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        accent: '#C9A84C',
+                        accentHover: '#D4B85A',
+                        dark: '#0A0A0A',
+                        darker: '#050505',
+                        card: '#111111',
+                        cardHover: '#1A1A1A',
+                        surface: '#161616',
+                        border: '#2A2A2A',
+                        textMuted: '#888888',
+                        textLight: '#E5E5E5',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0A0A0A; }
+        ::-webkit-scrollbar-thumb { background: #2A2A2A; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #C9A84C; }
+        ::selection { background: #C9A84C; color: #0A0A0A; }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-60px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(60px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(201, 168, 76, 0.2); }
+            50% { box-shadow: 0 0 40px rgba(201, 168, 76, 0.4); }
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .animate-fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-fade-in {
+            opacity: 0;
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        .animate-slide-left {
+            opacity: 0;
+            animation: slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-slide-right {
+            opacity: 0;
+            animation: slideInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+        .animate-scale-in {
+            opacity: 0;
+            animation: scaleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        .stagger-6 { animation-delay: 0.6s; }
+        .stagger-7 { animation-delay: 0.7s; }
+        .stagger-8 { animation-delay: 0.8s; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-scale.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0A0A0A 0%, #111111 50%, #0A0A0A 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 168, 76, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .grid-pattern {
+            background-image: 
+                linear-gradient(rgba(201, 168, 76, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(201, 168, 76, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .nav-glass {
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(42, 42, 42, 0.5);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #C9A84C;
+            transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        .nav-link:hover,
+        .nav-link.active {
+            color: #C9A84C;
+        }
+
+        .btn-primary {
+            background: #C9A84C;
+            color: #0A0A0A;
+            font-weight: 600;
+            padding: 14px 32px;
+            border-radius: 4px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        .btn-primary:hover {
+            background: #D4B85A;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 168, 76, 0.3);
+        }
+        .btn-outline {
+            border: 1px solid rgba(201, 168, 76, 0.5);
+            color: #C9A84C;
+            font-weight: 500;
+            padding: 14px 32px;
+            border-radius: 4px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            background: transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-outline:hover {
+            background: rgba(201, 168, 76, 0.1);
+            border-color: #C9A84C;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 168, 76, 0.15);
+        }
+
+        .service-card {
+            background: #111111;
+            border: 1px solid #2A2A2A;
+            border-radius: 8px;
+            padding: 40px 32px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #C9A84C, #D4B85A, #C9A84C);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+        .service-card:hover {
+            border-color: rgba(201, 168, 76, 0.3);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 60px rgba(201, 168, 76, 0.05);
+        }
+        .service-card .icon-wrapper {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: rgba(201, 168, 76, 0.1);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .service-card:hover .icon-wrapper {
+            background: rgba(201, 168, 76, 0.2);
+            transform: scale(1.1);
+        }
+
+        .portfolio-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .portfolio-card img {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+        }
+        .portfolio-card:hover img {
+            transform: scale(1.08);
+            filter: brightness(0.7);
+        }
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 10, 10, 0.95) 0%, rgba(10, 10, 10, 0.4) 50%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 24px;
+        }
+        .portfolio-card:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        .portfolio-card .portfolio-title {
+            transform: translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .portfolio-card:hover .portfolio-title {
+            transform: translateY(0);
+        }
+        .portfolio-card .portfolio-category {
+            transform: translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s;
+        }
+        .portfolio-card:hover .portfolio-category {
+            transform: translateY(0);
+        }
+
+        .filter-btn {
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            background: transparent;
+            color: #888888;
+            cursor: pointer;
+        }
+        .filter-btn:hover {
+            color: #E5E5E5;
+            border-color: #2A2A2A;
+        }
+        .filter-btn.active {
+            background: rgba(201, 168, 76, 0.1);
+            border-color: rgba(201, 168, 76, 0.3);
+            color: #C9A84C;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #C9A84C, #2A2A2A);
+        }
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #0A0A0A;
+            border: 3px solid #C9A84C;
+            position: absolute;
+            left: 17px;
+            top: 8px;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+        .timeline-item:hover .timeline-dot {
+            background: #C9A84C;
+            box-shadow: 0 0 20px rgba(201, 168, 76, 0.4);
+            transform: scale(1.2);
+        }
+        .timeline-card {
+            background: #111111;
+            border: 1px solid #2A2A2A;
+            border-radius: 8px;
+            padding: 24px 28px;
+            transition: all 0.3s ease;
+            margin-left: 56px;
+        }
+        .timeline-card:hover {
+            border-color: rgba(201, 168, 76, 0.3);
+            transform: translateX(8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-input {
+            background: #111111;
+            border: 1px solid #2A2A2A;
+            border-radius: 6px;
+            padding: 14px 18px;
+            color: #E5E5E5;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #C9A84C;
+            box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.1);
+            background: #161616;
+        }
+        .form-input::placeholder {
+            color: #555555;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #888888;
+        }
+
+        .social-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid #2A2A2A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888888;
+            transition: all 0.3s ease;
+            background: #111111;
+        }
+        .social-icon:hover {
+            border-color: #C9A84C;
+            color: #C9A84C;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(201, 168, 76, 0.15);
+            background: rgba(201, 168, 76, 0.05);
+        }
+
+        .skill-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: #111111;
+            border: 1px solid #2A2A2A;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #E5E5E5;
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            border-color: rgba(201, 168, 76, 0.4);
+            color: #C9A84C;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(201, 168, 76, 0.1);
+        }
+
+        .section-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #C9A84C, transparent);
+            border-radius: 2px;
+        }
+
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
+
+        .portfolio-item {
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .portfolio-item.hidden {
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+            position: absolute;
+        }
+        .portfolio-item.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .contact-info-card {
+            background: #111111;
+            border: 1px solid #2A2A2A;
+            border-radius: 8px;
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+        .contact-info-card:hover {
+            border-color: rgba(201, 168, 76, 0.3);
+            transform: translateY(-4px);
+        }
+        .contact-info-card .contact-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(201, 168, 76, 0.1);
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #C9A84C;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+        .contact-info-card:hover .contact-icon {
+            background: rgba(201, 168, 76, 0.2);
+            transform: scale(1.1);
+        }
+
+        .footer-link {
+            color: #888888;
+            transition: color 0.3s ease;
+        }
+        .footer-link:hover {
+            color: #C9A84C;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #C9A84C 0%, #D4B85A 50%, #C9A84C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-decoration {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 500px;
+            height: 500px;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        .hero-decoration::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid rgba(201, 168, 76, 0.3);
+            border-radius: 50%;
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+        .hero-decoration::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            height: 70%;
+            border: 1px solid rgba(201, 168, 76, 0.2);
+            border-radius: 50%;
+            animation: pulseGlow 4s ease-in-out infinite 1s;
+        }
+
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: #0A0A0A;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .loader-spinner {
+            width: 48px;
+            height: 48px;
+            border: 3px solid #2A2A2A;
+            border-top-color: #C9A84C;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 32px;
+            right: 32px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #111111;
+            border: 1px solid #2A2A2A;
+            color: #C9A84C;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 50;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            background: rgba(201, 168, 76, 0.1);
+            border-color: #C9A84C;
+            transform: translateY(-4px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-decoration { display: none; }
+            .timeline-line { left: 12px; }
+            .timeline-dot { left: 5px; width: 14px; height: 14px; }
+            .timeline-card { margin-left: 36px; }
+        }
+    </style>
+<base target="_blank">
+</head>
+
+<body class="bg-dark text-textLight font-sans antialiased">
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo / Brand -->
+                <a href="#hero" class="flex items-center gap-3 group">
+                    <div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center transition-all duration-300 group-hover:bg-accent/20 group-hover:border-accent/40">
+                        <span class="text-accent font-bold text-lg font-serif">M</span>
+                    </div>
+                    <div class="hidden sm:block">
+                        <span class="font-serif font-bold text-lg text-white tracking-wide">Manuel A.</span>
+                        <span class="block text-xs text-textMuted -mt-1">ThatGraphicsGuy</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#about" class="nav-link text-sm font-medium text-textMuted hover:text-white">About</a>
+                    <a href="#services" class="nav-link text-sm font-medium text-textMuted hover:text-white">Services</a>
+                    <a href="#portfolio" class="nav-link text-sm font-medium text-textMuted hover:text-white">Portfolio</a>
+                    <a href="#experience" class="nav-link text-sm font-medium text-textMuted hover:text-white">Experience</a>
+                    <a href="#contact" class="btn-primary text-sm py-2.5 px-6">Let's Talk</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center text-white" aria-label="Toggle menu">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="mobile-menu fixed inset-0 z-40 bg-dark/95 backdrop-blur-xl md:hidden">
+        <div class="flex flex-col items-center justify-center h-full gap-8">
+            <a href="#about" class="mobile-nav-link text-2xl font-serif text-white hover:text-accent transition-colors">About</a>
+            <a href="#services" class="mobile-nav-link text-2xl font-serif text-white hover:text-accent transition-colors">Services</a>
+            <a href="#portfolio" class="mobile-nav-link text-2xl font-serif text-white hover:text-accent transition-colors">Portfolio</a>
+            <a href="#experience" class="mobile-nav-link text-2xl font-serif text-white hover:text-accent transition-colors">Experience</a>
+            <a href="#contact" class="mobile-nav-link text-2xl font-serif text-white hover:text-accent transition-colors">Contact</a>
+            <button id="mobile-menu-close" class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center text-white" aria-label="Close menu">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg min-h-screen flex items-center relative">
+        <div class="grid-pattern"></div>
+        <div class="hero-decoration hidden lg:block"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-32 relative z-10 w-full">
+            <div class="max-w-3xl">
+                <!-- Tagline -->
+                <div class="animate-fade-in-up stagger-1 mb-6">
+                    <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium">
+                        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+                        Graphic Designer & Print Production Specialist
+                    </span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="animate-fade-in-up stagger-2 font-serif text-4xl sm:text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
+                    Sharp, Premium, <br>
+                    <span class="gradient-text">High-Impact</span> Visuals <br>
+                    That Demand Attention.
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="animate-fade-in-up stagger-3 text-lg sm:text-xl text-textMuted max-w-2xl mb-10 leading-relaxed">
+                    I don't believe in overcomplicating things — I believe in <span class="text-white font-medium">results</span>. Every pixel, every print, every brand asset is crafted to cut through the noise and deliver measurable impact.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="animate-fade-in-up stagger-4 flex flex-wrap gap-4">
+                    <a href="#portfolio" class="btn-primary">
+                        <span>View Work</span>
+                        <i class="fas fa-arrow-right text-sm"></i>
+                    </a>
+                    <a href="#contact" class="btn-outline">
+                        <span>Let's Work Together</span>
+                        <i class="fas fa-envelope text-sm"></i>
+                    </a>
+                </div>
+
+                <!-- Location Badge -->
+                <div class="animate-fade-in-up stagger-5 mt-16 flex items-center gap-6 text-textMuted text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-map-marker-alt text-accent"></i>
+                        <span>Lagos, Nigeria</span>
+                    </div>
+                    <div class="w-px h-4 bg-border"></div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-circle text-green-500 text-[8px]"></i>
+                        <span>Available for Projects</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+            <a href="#about" class="w-10 h-10 rounded-full border border-border flex items-center justify-center text-textMuted hover:text-accent hover:border-accent transition-all">
+                <i class="fas fa-chevron-down text-sm"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About / Profile Section -->
+    <section id="about" class="py-24 lg:py-32 bg-dark relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Column: Text Content -->
+                <div class="reveal-left">
+                    <span class="text-accent text-sm font-semibold tracking-widest uppercase mb-4 block">About Me</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+                        Design is not just <br>what it looks like.<br>
+                        <span class="gradient-text">It's what it does.</span>
+                    </h2>
+                    <p class="text-textMuted text-lg leading-relaxed mb-8">
+                        I'm Manuel A. — a Lagos-based Graphic Designer and Print Production Specialist with a relentless focus on clarity, impact, and commercial results. From brand identities that command attention to print materials that convert, every project is an opportunity to create something that works as hard as you do.
+                    </p>
+                    <p class="text-textMuted leading-relaxed mb-10">
+                        My approach is simple: understand the business goal, design the solution, and deliver with precision. No fluff. No overdesign. Just sharp, premium visuals that get the job done.
+                    </p>
+
+                    <!-- Software & Tools -->
+                    <div class="mb-10">
+                        <h3 class="text-white font-semibold mb-4 text-sm tracking-widest uppercase">Software & Tools</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag"><i class="fab fa-adobe text-accent"></i> Adobe Photoshop</span>
+                            <span class="skill-tag"><i class="fas fa-vector-square text-accent"></i> Affinity Designer</span>
+                            <span class="skill-tag"><i class="fas fa-pen-nib text-accent"></i> CorelDRAW</span>
+                            <span class="skill-tag"><i class="fas fa-palette text-accent"></i> Canva</span>
+                        </div>
+                    </div>
+
+                    <!-- Core Skills -->
+                    <div>
+                        <h3 class="text-white font-semibold mb-4 text-sm tracking-widest uppercase">Core Expertise</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="skill-tag">Typography</span>
+                            <span class="skill-tag">Layout Design</span>
+                            <span class="skill-tag">Brand Strategy</span>
+                            <span class="skill-tag">Pre-Press Setup</span>
+                            <span class="skill-tag">Printing Services</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Visual Element -->
+                <div class="reveal-right relative">
+                    <div class="relative">
+                        <!-- Decorative frame -->
+                        <div class="absolute -inset-4 border border-accent/20 rounded-2xl"></div>
+                        <div class="absolute -inset-8 border border-accent/10 rounded-3xl"></div>
+
+                        <!-- Main image container -->
+                        <div class="relative rounded-xl overflow-hidden bg-card border border-border">
+                            <img 
+                                src="https://images.unsplash.com/photo-1626785774573-4b799315345d?w=800&h=1000&fit=crop&q=80" 
+                                alt="Graphic Design Workspace" 
+                                class="w-full h-[500px] object-cover opacity-80 hover:opacity-100 transition-opacity duration-500"
+                            >
+                            <!-- Overlay info card -->
+                            <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-dark via-dark/80 to-transparent">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-12 h-12 rounded-full bg-accent/20 border border-accent/30 flex items-center justify-center">
+                                        <i class="fas fa-award text-accent text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-white font-semibold">5+ Years Experience</p>
+                                        <p class="text-textMuted text-sm">Across Lagos & Abuja</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating stat card -->
+                        <div class="absolute -bottom-6 -left-6 bg-card border border-border rounded-xl p-5 shadow-2xl hidden sm:block">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
+                                    <i class="fas fa-briefcase text-accent"></i>
+                                </div>
+                                <div>
+                                    <p class="text-2xl font-bold text-white">100+</p>
+                                    <p class="text-textMuted text-xs">Projects Delivered</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 lg:py-32 bg-darker relative">
+        <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 1px 1px, rgba(201,168,76,0.05) 1px, transparent 0); background-size: 40px 40px;"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="text-accent text-sm font-semibold tracking-widest uppercase mb-4 block">What I Do</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Services Built for <span class="gradient-text">Impact</span></h2>
+                <p class="text-textMuted text-lg">From digital branding to physical print production — every service is designed to elevate your brand and drive results.</p>
+                <div class="section-divider mx-auto mt-6"></div>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1: Graphic Design -->
+                <div class="service-card reveal stagger-1">
+                    <div class="icon-wrapper mb-6">
+                        <i class="fas fa-paint-brush text-accent text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Graphic Design</h3>
+                    <p class="text-textMuted leading-relaxed mb-4">
+                        Brand identity systems, high-contrast marketing assets, and visual collateral that makes your brand impossible to ignore.
+                    </p>
+                    <ul class="space-y-2 text-sm text-textMuted">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Brand Identity Systems</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Marketing Collateral</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Social Media Assets</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Print Media & Production -->
+                <div class="service-card reveal stagger-2">
+                    <div class="icon-wrapper mb-6">
+                        <i class="fas fa-print text-accent text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Print Media & Production</h3>
+                    <p class="text-textMuted leading-relaxed mb-4">
+                        End-to-end print management from pre-press setup to physical production. Quality control at every stage.
+                    </p>
+                    <ul class="space-y-2 text-sm text-textMuted">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Pre-Press Setup</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Color Management</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Physical Print Management</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Brochure & Editorial Design -->
+                <div class="service-card reveal stagger-3">
+                    <div class="icon-wrapper mb-6">
+                        <i class="fas fa-book-open text-accent text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Brochure & Editorial Design</h3>
+                    <p class="text-textMuted leading-relaxed mb-4">
+                        Structured, multi-page layouts for ceremonies, programs, booklets, and publications with heavy text management.
+                    </p>
+                    <ul class="space-y-2 text-sm text-textMuted">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Multi-Page Programs</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Wedding Booklets</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Editorial Layouts</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4: Digital & Print Menu Design -->
+                <div class="service-card reveal stagger-4">
+                    <div class="icon-wrapper mb-6">
+                        <i class="fas fa-utensils text-accent text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Digital & Print Menu Design</h3>
+                    <p class="text-textMuted leading-relaxed mb-4">
+                        Custom menu layouts for restaurants, hotels, and lounges — designed for readability, appetite appeal, and premium presentation.
+                    </p>
+                    <ul class="space-y-2 text-sm text-textMuted">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Restaurant Menus</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Hotel & Lounge Suites</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Premium Spirits Listings</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5: Corporate Stationery -->
+                <div class="service-card reveal stagger-5 md:col-span-2 lg:col-span-1">
+                    <div class="icon-wrapper mb-6">
+                        <i class="fas fa-id-card text-accent text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Corporate Stationery</h3>
+                    <p class="text-textMuted leading-relaxed mb-4">
+                        Professional business cards, letterheads, envelopes, and complete stationery suites that reinforce brand credibility.
+                    </p>
+                    <ul class="space-y-2 text-sm text-textMuted">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Business Cards</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Letterheads & Envelopes</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-accent text-xs"></i> Complete Stationery Suites</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Showcase Section -->
+    <section id="portfolio" class="py-24 lg:py-32 bg-dark relative">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+                <span class="text-accent text-sm font-semibold tracking-widest uppercase mb-4 block">Selected Work</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Portfolio <span class="gradient-text">Showcase</span></h2>
+                <p class="text-textMuted text-lg">A curated selection of projects spanning branding, print, editorial, and commercial design.</p>
+                <div class="section-divider mx-auto mt-6"></div>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12 reveal">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="branding">Branding & Digital</button>
+                <button class="filter-btn" data-filter="print">Print & Editorial</button>
+                <button class="filter-btn" data-filter="menu">Commercial Menus</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+
+                <!-- Branding & Digital Items -->
+
+                <!-- Project 1: Prime Shine Mobile Detailing -->
+                <div class="portfolio-item show" data-category="branding">
+                    <div class="portfolio-card bg-card border border-border rounded-lg overflow-hidden">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=600&h=450&fit=crop&q=80" 
+                                alt="Prime Shine Mobile Detailing - Premium social media promotional assets"
+                                class="w-full h-full object-cover"
+                            >
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category text-accent text-xs font-semibold tracking-widest uppercase mb-2">Branding & Digital</span>
+                                <h3 class="portfolio-title text-white font-bold text-lg">Prime Shine Mobile Detailing</h3>
+                                <p class="portfolio-title text-textMuted text-sm mt-1">"Wash away the weekend" — Premium social media promotional assets</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Bamidan Group Ltd -->
+                <div class="portfolio-item show" data-category="branding">
+                    <div class="portfolio-card bg-card border border-border rounded-lg overflow-hidden">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&h=450&fit=crop&q=80" 
+                                alt="Bamidan Group Ltd - Luxury automotive promotional graphics"
+                                class="w-full h-full object-cover"
+                            >
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category text-accent text-xs font-semibold tracking-widest uppercase mb-2">Branding & Digital</span>
+                                <h3 class="portfolio-title text-white font-bold text-lg">Bamidan Group Ltd</h3>
+                                <p class="portfolio-title text-textMuted text-sm mt-1">Sleek, luxury-focused automotive promotional graphics (Novara Drive / McLaren concept)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: OyinnsTouch Hair Salon (UK) -->
+                <div class="portfolio-item show" data-category="branding">
+                    <div class="portfolio-card bg-card border border-border rounded-lg overflow-hidden">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=450&fit=crop&q=80" 
+                                alt="OyinnsTouch Hair Salon - High-contrast Models Wanted campaign flyers"
+                                class="w-full h-full object-cover"
+                            >
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category text-accent text-xs font-semibold tracking-widest uppercase mb-2">Branding & Digital</span>
+                                <h3 class="portfolio-title text-white font-bold text-lg">OyinnsTouch Hair Salon (UK)</h3>
+                                <p class="portfolio-title text-textMuted text-sm mt-1">High-contrast "Models Wanted" campaign flyers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Print & Editorial Items -->
+
+                <!-- Project 4: Multi-Page Wedding Programmes -->
+                <div class="portfolio-item show" data-category="print">
+                    <div class="portfolio-card bg-card border border-border rounded-lg overflow-hidden">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=450&fit=crop&q=80" 
+                                alt="Multi-Page Wedding Programmes - Structured ceremony booklets"
+                                class="w-full h-full object-cover"
+                            >
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category text-accent text-xs font-semibold tracking-widest uppercase mb-2">Print & Editorial</span>
+                                <h3 class="portfolio-title text-white font-bold text-lg">Multi-Page Wedding Programmes</h3>
+                                <p class="portfolio-title text-textMuted text-sm mt-1">Structured ceremony booklets (Faith & Bright / Janet & James weddings) managing heavy text, timelines, and hymn lyrics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5: Royal Albert Properties -->
+                <div class="portfolio-item show" data-category="print">
+                    <div class="portfolio-card bg-card border border-border rounded-lg overflow-hidden">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=450&fit=crop&q=80" 
+                                alt="Royal Albert Properties - Clean minimalist real estate promotional flyers"
+                                class="w-full h-full object-cover"
+                            >
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category text-accent text-xs font-semibold tracking-widest uppercase mb-2">Print & Editorial</span>
+                                <h3 class="portfolio-title text-white font-bold text-lg">Royal Albert Properties</h3>
+                                <p class="portfolio-title text-textMuted text-sm mt-1">Clean, minimalist real estate promotional flyers with sharp geometric layouts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Faith & Community Media -->
+                <div class="portfolio-item show" data-category="print">
+                    <div class="portfolio-card bg-card border border-border rounded-lg overflow-hidden">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600&h=450&fit=crop&q=80" 
+                                alt="Faith & Community Media - Vibrant event invitations and cultural holiday graphics"
+                                class="w-full h-full object-cover"
+                            >
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category text-accent text-xs font-semibold tracking-widest uppercase mb-2">Print & Editorial</span>
+                                <h3 class="portfolio-title text-white font-bold text-lg">Faith & Community Media</h3>
+                                <p class="portfolio-title text-textMuted text-sm mt-1">Vibrant event invitations for Family Worship Centre and cultural holiday graphics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commercial Menus Items -->
+
+                <!-- Project 7: Hospitality Menu Suite -->
+                <div class="portfolio-item show" data-category="menu">
+                    <div class="portfolio-card bg-card border border-border rounded-lg overflow-hidden md:col-span-2 lg:col-span-3">
+                        <div class="relative aspect-[16/7] overflow-hidden">
+                            <img 
+                                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=525&fit=crop&q=80" 
+                                alt="Hospitality Menu Suite - Premium menu layouts for restaurants and hotels"
+                                class="w-full h-full object-cover"
+                            >
+                            <div class="portfolio-overlay">
+                                <span class="portfolio-category text-accent text-xs font-semibold tracking-widest uppercase mb-2">Commercial Menus</span>
+                                <h3 class="portfolio-title text-white font-bold text-xl">Hospitality Menu Suite</h3>
+                                <p class="portfolio-title text-textMuted text-sm mt-1 max-w-2xl">Highly readable layouts for Mamma Africana, Royal Island Hotel & Suites, and Hotel De-Mikados featuring extensive item listings and premium spirits</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline Section -->
+    <section id="experience" class="py-24 lg:py-32 bg-darker relative">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="text-accent text-sm font-semibold tracking-widest uppercase mb-4 block">Career Path</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Professional <span class="gradient-text">Experience</span></h2>
+                <p class="text-textMuted text-lg">A journey through design studios, print houses, and freelance projects across Nigeria's major cities.</p>
+                <div class="section-divider mx-auto mt-6"></div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative">
+                <!-- Vertical Line -->
+                <div class="timeline-line"></div>
+
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- Present: PrintPro, Lekki -->
+                    <div class="timeline-item relative reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                                <h3 class="text-lg font-bold text-white">Graphic Designer & Printer</h3>
+                                <span class="text-accent text-sm font-semibold mt-1 sm:mt-0">Present</span>
+                            </div>
+                            <p class="text-accent font-medium mb-2">PrintPro, Lekki — Lagos, Nigeria</p>
+                            <p class="text-textMuted text-sm leading-relaxed">
+                                Leading design and print production operations. Managing client projects from concept to final print delivery. Overseeing pre-press workflows, color calibration, and quality assurance for high-volume commercial printing.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Multi-Print, Abuja -->
+                    <div class="timeline-item relative reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                                <h3 class="text-lg font-bold text-white">Graphic Designer & Print Specialist</h3>
+                                <span class="text-textMuted text-sm font-medium mt-1 sm:mt-0">Former</span>
+                            </div>
+                            <p class="text-accent font-medium mb-2">Multi-Print — Abuja, Nigeria</p>
+                            <p class="text-textMuted text-sm leading-relaxed">
+                                Designed and produced marketing collateral, corporate stationery, and large-format prints. Collaborated with clients across government and private sectors on branding and print campaigns.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Jaycee Computers, Abuja -->
+                    <div class="timeline-item relative reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                                <h3 class="text-lg font-bold text-white">Graphic Designer</h3>
+                                <span class="text-textMuted text-sm font-medium mt-1 sm:mt-0">Former</span>
+                            </div>
+                            <p class="text-accent font-medium mb-2">Jaycee Computers — Abuja, Nigeria</p>
+                            <p class="text-textMuted text-sm leading-relaxed">
+                                Created visual assets for tech and corporate clients. Developed brand guidelines, digital marketing materials, and print-ready designs for product launches and promotional campaigns.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- ICC, Lekki -->
+                    <div class="timeline-item relative reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                                <h3 class="text-lg font-bold text-white">Junior Designer</h3>
+                                <span class="text-textMuted text-sm font-medium mt-1 sm:mt-0">Former</span>
+                            </div>
+                            <p class="text-accent font-medium mb-2">ICC — Lekki, Lagos, Nigeria</p>
+                            <p class="text-textMuted text-sm leading-relaxed">
+                                Supported senior designers on large-scale branding and editorial projects. Gained hands-on experience in print production workflows, color management, and client presentation techniques.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Freelance -->
+                    <div class="timeline-item relative reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+                                <h3 class="text-lg font-bold text-white">Freelance Graphic Designer</h3>
+                                <span class="text-textMuted text-sm font-medium mt-1 sm:mt-0">Ongoing</span>
+                            </div>
+                            <p class="text-accent font-medium mb-2">Independent — Lagos & Abuja, Nigeria</p>
+                            <p class="text-textMuted text-sm leading-relaxed">
+                                Serving a diverse client base across hospitality, real estate, automotive, and personal branding sectors. Delivering end-to-end design solutions from concept to print, with a focus on premium quality and client satisfaction.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer Section -->
+    <section id="contact" class="py-24 lg:py-32 bg-dark relative">
+        <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span class="text-accent text-sm font-semibold tracking-widest uppercase mb-4 block">Get In Touch</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Let's Create Something <span class="gradient-text">Remarkable</span></h2>
+                <p class="text-textMuted text-lg">Ready to elevate your brand? Reach out and let's discuss how we can bring your vision to life.</p>
+                <div class="section-divider mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-12">
+                <!-- Contact Info (Left Column) -->
+                <div class="lg:col-span-2 space-y-6 reveal-left">
+                    <!-- Phone & WhatsApp -->
+                    <div class="contact-info-card">
+                        <div class="flex items-start gap-4">
+                            <div class="contact-icon flex-shrink-0" style="background: rgba(37, 211, 102, 0.1); border-color: rgba(37, 211, 102, 0.2); color: #25D366;">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold mb-1">WhatsApp & Phone</h3>
+                                <a href="https://wa.me/2348079922558" target="_blank" rel="noopener noreferrer" class="block text-[#25D366] hover:text-[#25D366]/80 transition-colors text-sm font-medium">+234 807 992 2558 (WhatsApp)</a>
+                                <a href="tel:+2349123540022" class="block text-textMuted hover:text-accent transition-colors text-sm mt-1">+234 912 354 0022</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-info-card">
+                        <div class="flex items-start gap-4">
+                            <div class="contact-icon flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold mb-1">Email</h3>
+                                <a href="mailto:oluwareborn7@gmail.com" class="block text-textMuted hover:text-accent transition-colors text-sm">oluwareborn7@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="contact-info-card">
+                        <div class="flex items-start gap-4">
+                            <div class="contact-icon flex-shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-white font-semibold mb-1">Location</h3>
+                                <p class="text-textMuted text-sm">Lagos, Nigeria</p>
+                                <p class="text-textMuted text-sm">Available for remote & on-site projects</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="pt-4">
+                        <h3 class="text-white font-semibold mb-4 text-sm tracking-widest uppercase">Follow Me</h3>
+                        <div class="flex gap-4">
+                            <a href="https://wa.me/2348079922558" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp" style="color: #25D366; border-color: rgba(37, 211, 102, 0.3);">
+                                <i class="fab fa-whatsapp text-lg"></i>
+                            </a>
+                            <a href="https://instagram.com/thatgraphicsguy_7" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                                <i class="fab fa-instagram text-lg"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/linus-emmanuel" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin-in text-lg"></i>
+                            </a>
+                            <a href="mailto:oluwareborn7@gmail.com" class="social-icon" aria-label="Email">
+                                <i class="fas fa-envelope text-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Contact Actions (Right Column) -->
+                <div class="lg:col-span-3 reveal-right">
+                    <div class="bg-card border border-border rounded-xl p-8 lg:p-10">
+                        <h3 class="text-white font-bold text-xl mb-2">Start a Conversation</h3>
+                        <p class="text-textMuted text-sm mb-8">Choose the fastest way to reach me. I typically respond within a few hours.</p>
+
+                        <!-- WhatsApp CTA -->
+                        <a href="https://wa.me/2348079922558?text=Hi%20Manuel%2C%20I%20saw%20your%20portfolio%20and%20I%27m%20interested%20in%20your%20design%20services.%20Can%20we%20discuss%20my%20project%3F" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="group flex items-center gap-4 bg-[#25D366]/10 border border-[#25D366]/30 rounded-xl p-5 mb-4 transition-all duration-300 hover:bg-[#25D366]/20 hover:border-[#25D366]/50 hover:translate-y-[-2px]">
+                            <div class="w-12 h-12 rounded-full bg-[#25D366]/20 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                                <i class="fab fa-whatsapp text-[#25D366] text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-white font-semibold text-sm">Chat on WhatsApp</h4>
+                                <p class="text-textMuted text-xs mt-0.5">Fastest response — usually within minutes</p>
+                            </div>
+                            <i class="fas fa-external-link-alt text-textMuted text-xs group-hover:text-[#25D366] transition-colors"></i>
+                        </a>
+
+                        <!-- Email CTA -->
+                        <a href="mailto:oluwareborn7@gmail.com?subject=Project%20Inquiry%20-%20ThatGraphicsGuy&body=Hi%20Manuel%2C%0A%0AI%20saw%20your%20portfolio%20and%20I%27m%20interested%20in%20discussing%20a%20project%20with%20you.%0A%0AProject%20Details%3A%0A-%20Type%20of%20project%3A%20%0A-%20Timeline%3A%20%0A-%20Budget%20range%3A%20%0A%0ALooking%20forward%20to%20hearing%20from%20you.%0A%0ABest%20regards%2C" 
+                           class="group flex items-center gap-4 bg-accent/5 border border-accent/20 rounded-xl p-5 mb-4 transition-all duration-300 hover:bg-accent/10 hover:border-accent/40 hover:translate-y-[-2px]">
+                            <div class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                                <i class="fas fa-envelope text-accent text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-white font-semibold text-sm">Send an Email</h4>
+                                <p class="text-textMuted text-xs mt-0.5">oluwareborn7@gmail.com — detailed project briefs</p>
+                            </div>
+                            <i class="fas fa-external-link-alt text-textMuted text-xs group-hover:text-accent transition-colors"></i>
+                        </a>
+
+                        <!-- Phone CTA -->
+                        <a href="tel:+2348079922558" 
+                           class="group flex items-center gap-4 bg-white/5 border border-border rounded-xl p-5 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:translate-y-[-2px]">
+                            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                                <i class="fas fa-phone-alt text-white/70 text-xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-white font-semibold text-sm">Call Directly</h4>
+                                <p class="text-textMuted text-xs mt-0.5">+234 807 992 2558 — for urgent inquiries</p>
+                            </div>
+                            <i class="fas fa-external-link-alt text-textMuted text-xs group-hover:text-white transition-colors"></i>
+                        </a>
+
+                        <!-- Response time note -->
+                        <div class="mt-6 flex items-center gap-3 px-4 py-3 rounded-lg bg-accent/5 border border-accent/10">
+                            <i class="fas fa-clock text-accent text-sm"></i>
+                            <p class="text-textMuted text-xs">I typically respond to WhatsApp within <span class="text-white font-medium">30 minutes</span> and emails within <span class="text-white font-medium">24 hours</span>.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-border py-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <!-- Brand -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center">
+                        <span class="text-accent font-bold text-lg font-serif">M</span>
+                    </div>
+                    <div>
+                        <span class="font-serif font-bold text-white tracking-wide">Manuel A.</span>
+                        <span class="block text-xs text-textMuted -mt-1">ThatGraphicsGuy</span>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="flex flex-wrap justify-center gap-6 text-sm">
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#services" class="footer-link">Services</a>
+                    <a href="#portfolio" class="footer-link">Portfolio</a>
+                    <a href="#experience" class="footer-link">Experience</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-textMuted text-sm">
+                    &copy; 2026 Manuel A. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- ============================================
+         JAVASCRIPT INTERACTIVITY
+         ============================================ -->
+    <script>
+        // ============================================
+        // LOADING SCREEN
+        // ============================================
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('hidden');
+            }, 600);
+        });
+
+        // ============================================
+        // NAVIGATION SCROLL EFFECT
+        // ============================================
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                navbar.classList.add('nav-glass');
+            } else {
+                navbar.classList.remove('nav-glass');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // ============================================
+        // MOBILE MENU TOGGLE
+        // ============================================
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+                closeMobileMenu();
+            }
+        });
+
+        // ============================================
+        // ACTIVE NAV LINK HIGHLIGHTING (SCROLL SPY)
+        // ============================================
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // ============================================
+        // SCROLL REVEAL ANIMATIONS (IntersectionObserver)
+        // ============================================
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Optional: unobserve after revealing
+                    // revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ============================================
+        // PORTFOLIO FILTERING
+        // ============================================
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const portfolioGrid = document.getElementById('portfolio-grid');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                portfolioItems.forEach(item => {
+                    const category = item.getAttribute('data-category');
+
+                    if (filter === 'all' || category === filter) {
+                        item.classList.remove('hidden');
+                        item.classList.add('show');
+                        // Reset position for grid layout
+                        item.style.position = 'relative';
+                    } else {
+                        item.classList.remove('show');
+                        item.classList.add('hidden');
+                        // Hide from grid flow
+                        setTimeout(() => {
+                            if (item.classList.contains('hidden')) {
+                                item.style.position = 'absolute';
+                            }
+                        }, 500);
+                    }
+                });
+            });
+        });
+
+        // ============================================
+        // BACK TO TOP BUTTON
+        // ============================================
+        const backToTop = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+
+
+        // ============================================
+        // SMOOTH SCROLL FOR ANCHOR LINKS
+        // ============================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // ============================================
+        // PARALLAX EFFECT ON HERO DECORATION
+        // ============================================
+        const heroDecoration = document.querySelector('.hero-decoration');
+
+        if (heroDecoration && window.innerWidth > 1024) {
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                heroDecoration.style.transform = `translateY(-50%) translateY(${scrolled * 0.1}px)`;
+            });
+        }
+
+        // ============================================
+        // KEYBOARD NAVIGATION SUPPORT
+        // ============================================
+        document.addEventListener('keydown', (e) => {
+            // Focus trap for mobile menu
+            if (mobileMenu.classList.contains('open') && e.key === 'Tab') {
+                const focusableElements = mobileMenu.querySelectorAll('a, button');
+                const firstElement = focusableElements[0];
+                const lastElement = focusableElements[focusableElements.length - 1];
+
+                if (e.shiftKey && document.activeElement === firstElement) {
+                    e.preventDefault();
+                    lastElement.focus();
+                } else if (!e.shiftKey && document.activeElement === lastElement) {
+                    e.preventDefault();
+                    firstElement.focus();
+                }
+            }
+        });
+
+        // ============================================
+        // REDUCED MOTION SUPPORT
+        // ============================================
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            // Disable animations for users who prefer reduced motion
+            document.querySelectorAll('.animate-fade-in-up, .animate-fade-in, .animate-slide-left, .animate-slide-right, .animate-scale-in').forEach(el => {
+                el.style.opacity = '1';
+                el.style.animation = 'none';
+                el.style.transform = 'none';
+            });
+
+            document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+            });
+        }
+
+        // ============================================
+        // CONSOLE BRANDING
+        // ============================================
+        console.log('%c Manuel A. | ThatGraphicsGuy ', 'background: #C9A84C; color: #0A0A0A; font-size: 20px; font-weight: bold; padding: 10px 20px; border-radius: 4px;');
+        console.log('%c Graphic Designer & Print Production Specialist ', 'color: #C9A84C; font-size: 14px;');
+        console.log('%c Lagos, Nigeria | oluwareborn7@gmail.com ', 'color: #888888; font-size: 12px;');
+    </script>
+</body>
+</html>
